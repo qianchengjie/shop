@@ -1,0 +1,348 @@
+
+/*  主体  */
+.content{
+	overflow-y: hidden;
+	position: relative;
+}
+/*  分类面板  */
+.sort-content{
+	height: 100%;
+	display: none;
+}
+/*  分类头部搜索框  */
+.sort-header{
+	padding: 10px;
+	background-color: #F1F1F1;
+	position: relative;
+}
+.sort-header input{
+	padding: 0 35px;
+	border-radius: 4px;
+	font-size: 1.3rem;
+	width: 100%;
+	border: 1px solid #EEE;
+}
+.sort-header span.icon{
+	margin: 17.5px 10px;
+	font-size: 1.5rem;
+	color: #CCC;
+	position: absolute;
+	vertical-align: middle;
+}
+.sort-header span.del{
+	right: 0;
+	margin: 17.5px 20px;
+	font-size: 1.5rem;
+	color: #CCC;
+	position: absolute;
+	vertical-align: middle;
+}
+/*  分类内容  */
+.sort-body{
+	position: relative;
+}
+.sort-sidebar{
+	float: left;
+	height: 100%;
+	width: 25vw;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: #F1F1F1;
+}
+/*  分类侧边栏  */
+.sort-sidebar .nav{
+}
+.sort-sidebar .nav li{
+	width: 25vw;
+	box-sizing: border-box;
+	border-bottom: 1px solid #E5E5E5;
+}
+.sort-sidebar .nav li.active a{
+	background-color: #FFF;
+	border-left: 4px solid #3366CC;
+}
+/*  浮动分类  */
+.sort-sidebar .nav li.activeClone a{
+	background-color: #FFF;
+	border-left: 4px solid #3366CC;
+}
+.sort-sidebar .nav a{
+	font-size: 1.5rem;
+	color: #5F5F5F;
+}
+/*  商品列表  */
+.sort-goods{
+	float: left;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 75vw;
+}
+.goods-list{}
+.goods-list li{
+	margin-top: 5vw;
+	float: left;
+	margin-left: 5vw;
+	width: 30vw;
+	box-sizing: border-box;
+	border: 1px solid #F1F1F1;
+	box-shadow: 1px 2px 5px #F1F1F1;
+}
+.goods-list li a{
+	color: #5F5F5F;
+}
+.goods-list a img{
+	width: 100%;
+	height: 30vw;
+}
+.goods-list .good-info{
+	border-top: 1px solid #F1F1F1;
+	padding: 4px;
+}
+.goods-list .good-info p{
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.goods-list .good-info span{
+	width: 100%;
+	color: red;
+	text-align: right;
+}
+
+.sort-goods::after,.sort-body::after{
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	clear: both;
+}
+/*  购物车面板  */
+.shopcart-content{}
+/*  已加入购物车商品  */
+.shopcart-goods{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+/* 购物车顶部操作栏 */
+.shopcart-top{
+	height: 40px;
+	border-bottom: 1px solid #E1E1E1;
+	position: relative;
+	box-shadow: 2px 0px 8px #E1E1E1;
+}
+.shopcart-top h4{
+	margin: 0;
+	line-height: 40px;
+	padding-left: 1em;
+}
+.shopcart-top span{
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
+.shopcart-goods-list{}
+.shopcart-goods-list li{
+	padding: .5rem 0;
+	border-bottom: 1px solid #E1E1E1;
+	box-sizing: border-box;
+}
+.shopcart-goods-list li::after{
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	clear: both;
+}
+.shopcart-good-left{
+	float: left;
+	width: 10vw;
+	height: 100%;
+
+}
+.shopcart-good-left input{
+	display: none;
+}
+.shopcart-good-left span{
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	border: 1px solid #CCC;
+	border-radius: 1rem;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	text-align: center;
+	margin: 30px auto;
+}
+.shopcart-good-left span.active{
+	color: #FFF;
+	background-color: #ffa800;
+}
+.shopcart-good-right{
+	float: left;
+	width: 90vw;
+	height: 100px;
+}
+.shopcart-good-right img{
+	float: left;
+	height: 100px;
+}
+.shopcart-good-right::after{
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	clear: both;
+}
+.shopcart-good-info{
+	position: relative;
+	height: 100px;
+}
+.shopcart-good-info p{
+	margin: 0;
+	padding: 0 1rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	font-size: 1.3rem;
+}
+.shopcart-good-info .price,.shopcart-good-edit .price{
+	color: red;
+	padding: 1rem;
+	font-size: 1.5rem;
+	display: inline-block;
+}
+.shopcart-good-info .amount{
+	padding: 1rem;
+	color: #888;
+	font-size: 1.5rem;
+	position: absolute;
+	right: 1rem;
+	display: inline-block;
+}
+.shopcart-good-edit{
+	position: relative;
+	display: none;
+}
+.shopcart-good-edit .amount-edit{}
+.amount-edit .amount-add,.amount-edit .amount-minus{
+	padding: .5em;
+	border-radius: 4px;
+	margin: 0 .5em;
+}
+.amount-edit .amount{
+	color: #888;
+	font-size: 1.5rem;
+	width: 3em;
+	display: inline-block;
+	text-align: center;
+}
+.shopcart-good-edit .del{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 5rem;
+	height: 100px;
+	line-height: 100px;
+	font-size: 1.5rem;
+	color: #FFF;
+	text-align: center;
+	background-color: #DC2222;
+	display: inline-block;
+}
+.shopcart-bottom{
+	position: relative;
+	bottom: 0;
+	height: 50px;
+	border-top: 1px solid #E1E1E1;
+	width: 100%;
+}
+.shopcart-select-all{
+	position: relative;
+	left: 0;
+	height: 50px;
+	line-height: 50px;
+}
+.shopcart-select-all span{
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	border: 1px solid #CCC;
+	border-radius: 1rem;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	text-align: center;
+	margin: 12px 10px;
+}
+.shopcart-select-all span.active{
+	color: #FFF;
+	background-color: #ffa800;
+}
+.shopcart-bottom .text{
+	position: absolute;
+	top: 0;
+	line-height: 50px;
+	margin-left: 40px;
+	font-size: 1.5rem;
+}
+.shopcart-bottom .all-price{
+	font-size: 1.2rem;
+	line-height: 50px;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 100px;
+}
+.all-price .price{
+	color: red;
+}
+.shopcart-bottom  .buy{
+	background-color: #FFA800;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 6em;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #FFF;
+	font-size: 1.5rem;
+}
+/*  底部导航栏  */
+nav.bottom-nav{
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	box-shadow: -2px 0px 8px #E1E1E1;
+	background-color: #FFF;
+}
+nav.bottom-nav .nav{
+	width: 100%;
+	text-align: center;
+}
+nav.bottom-nav .nav li{
+	width: 25%;
+	float: left;
+}
+nav.bottom-nav .nav li.active a{
+	color: #00CCFF;
+}
+nav.bottom-nav span{
+	display: block;
+	font-size: 2rem;
+}
+nav.bottom-nav a{
+	color: #5F5F5F;
+	padding: .5rem;
+}
+nav.bottom-nav a:hover{
+	background-color: #FFF;
+}
